@@ -14,18 +14,18 @@ $email    = $_POST['email'];
 $comments = $_POST['comments'];
 
 if(trim($name) == '') {
-	echo '<div class="error_message">You must enter your name.</div>';
+	echo '<div class="error_message">এখানে আপনার নাম লিখুন ।</div>';
 	exit();
 } else if(trim($email) == '') {
-	echo '<div class="error_message">Please enter a valid email address.</div>';
+	echo '<div class="error_message">এখানে আপনার একটা এক্টিভ মেইল এড্রেস দিন ।</div>';
 	exit();
 } else if(!isEmail($email)) {
-	echo '<div class="error_message">You have entered an invalid e-mail address. Please try again.</div>';
+	echo '<div class="error_message">আপনার মেইল এড্রেসটি সঠিক নয়, অনুগ্রহ করে আবার চেষ্টা করুন ।</div>';
 	exit();
 }
 
 if(trim($comments) == '') {
-	echo '<div class="error_message">Please enter your message.</div>';
+	echo '<div class="error_message">এখানে আপনার মতামত দিন ।</div>';
 	exit();
 }
 
@@ -47,8 +47,8 @@ $address = "akib.ict.iu@gmail.com";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-//$e_subject = 'You have been contacted by ' . $name . '.';
-$e_subject = '$name . ' has contacted you via Your Website.';
+$e_subject = 'You have been contacted by ' . $name . '.';
+//$e_subject = '$name . ' has contacted you via Your Website.';
 
 // Configuration option.
 // You can change this if you feel that you need to.
